@@ -1,0 +1,252 @@
+/* 
+.id-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 20px 20px;
+  background-color: #ffffff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  text-align: left;
+}
+
+.id-container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: #111;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  color: #111;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 0;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  background-color: #111;
+  color: #fff;
+  font-size: 13px;
+  padding: 12px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.letter-preview {
+  margin-top: 30px;
+  text-align: center;
+  color: #111;
+}
+
+.letter-preview h3 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.letter-preview p {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.letter-preview a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.letter-preview a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .id-container {
+    padding: 20px 16px;
+    margin: 40px 16px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .id-container h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .id-container {
+    padding: 16px 12px;
+    margin: 30px 12px;
+  }
+
+  .letter-preview p,
+  .letter-preview a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .id-container {
+    max-width: 90%;            
+    padding: 16px;            
+    margin: 40px auto;         
+  }
+
+  form {
+    gap: 16px;                 
+  }
+
+  .id-container h2 {
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .letter-preview h3 {
+    font-size: 13px;
+  }
+
+  .letter-preview p,
+  .letter-preview a {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .id-container {
+    max-width: 95%;
+    padding: 14px;
+    margin: 20px auto;
+  }
+
+  .id-container h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  button {
+    font-size: 11px;
+    padding: 9px;
+  }
+
+  .letter-preview a {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+ */
+
+select {
+  --appearance: none;
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 10px 5px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* Style the option elements if supported */
+select option {
+  background-color: #000;
+  color: #fff;
+}
+

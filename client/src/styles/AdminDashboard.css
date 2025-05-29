@@ -1,0 +1,270 @@
+/* Admin Dashboard Container */
+.admindash-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* Side Panel Styles */
+.admindash-sidepanel {
+  width: 280px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.admindash-brand {
+  padding: 22px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e7d32;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  background-color: #f1f8e9;
+}
+
+.admindash-navigation {
+  padding: 20px 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admindash-menulist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.admindash-menuitem {
+  margin-bottom: 8px;
+}
+
+.admindash-dropdown {
+  margin: 0 10px;
+}
+
+.admindash-menuheader {
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #455a64;
+  border-radius: 6px;
+  background-color: #f5f7fa;
+}
+
+.admindash-menuheader:hover {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.admindash-dropdown[open] .admindash-menuheader {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.admindash-arrowicon {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.admindash-dropdown[open] .admindash-arrowicon {
+  transform: rotate(180deg);
+}
+
+.admindash-submenulist {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.admindash-sublink {
+  color: #546e7a;
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px 12px 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.admindash-sublink:hover {
+  background-color: #f1f8e9;
+  color: #2e7d32;
+  padding-left: 36px;
+}
+
+.admindash-sublink:hover::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #2e7d32;
+  border-radius: 50%;
+}
+
+.admindash-sublink.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Nested Dropdown Styles */
+.admindash-nesteddropdown {
+  margin: 0;
+}
+
+.admindash-nestedsublist {
+  list-style: none;
+  padding: 0 0 0 15px;
+  margin: 0;
+  background-color: #f8f9fa;
+  border-left: 2px solid #e0e0e0;
+}
+
+.admindash-nestedsublink {
+  color: #546e7a;
+  text-decoration: none;
+  display: block;
+  padding: 10px 16px 10px 42px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.85rem;
+}
+
+.admindash-nestedsublink:hover {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding-left: 46px;
+}
+
+.admindash-nestedsublink:hover::before {
+  content: "»";
+  position: absolute;
+  left: 28px;
+  color: #2e7d32;
+}
+
+.admindash-nestedsublink.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Logout Button Styles */
+.admindash-logoutbtn {
+  margin-top: auto;
+  background-color: #ffebee !important;
+  color: #c62828 !important;
+}
+
+.admindash-logoutbtn:hover {
+  background-color: #ffcdd2 !important;
+  color: #b71c1c !important;
+}
+
+.admindash-logouticon {
+  font-size: 0.9rem;
+}
+
+/* Content Area Styles */
+.admindash-contentarea {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Admin Page Content Styles */
+.admindash-pagecontent {
+  padding: 20px;
+  animation: admindashFadeIn 0.4s ease-out;
+}
+
+@keyframes admindashFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admindash-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .admindash-sidepanel {
+    width: 240px;
+  }
+  
+  .admindash-contentarea {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admindash-container {
+    flex-direction: column;
+  }
+
+  .admindash-sidepanel {
+    width: 100%;
+  }
+
+  .admindash-brand {
+    padding: 18px;
+    font-size: 1.3rem;
+  }
+
+  .admindash-contentarea {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admindash-menuheader {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .admindash-sublink {
+    padding: 10px 14px 10px 30px;
+    font-size: 0.85rem;
+  }
+
+  .admindash-sublink:hover {
+    padding-left: 34px;
+  }
+
+  .admindash-nestedsublink {
+    padding: 8px 14px 8px 38px;
+    font-size: 0.8rem;
+  }
+
+  .admindash-nestedsublink:hover {
+    padding-left: 42px;
+  }
+
+  .admindash-contentarea {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,256 @@
+/* AdminIdRequests.css */
+
+.admin-id-container {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.admin-id-container h1 {
+  font-weight: 300;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  color: #222;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.8rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  min-width: 250px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.rows-per-page label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rows-per-page select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.requests-table th {
+  text-align: left;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #666;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.requests-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.requests-table tr:hover td {
+  background-color: #fafafa;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.approve-btn {
+  background-color: #000;
+  color: white;
+}
+
+.approve-btn:not(:disabled):hover {
+  background-color: #333;
+}
+
+.reject-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.reject-btn:not(:disabled):hover {
+  background-color: #e0e0e0;
+}
+
+.download-btn {
+  background-color: transparent;
+  border: 1px solid #17A2B8;
+  color: white;
+}
+
+.download-btn:hover {
+  background-color: #000;
+  color: white;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #5A6268;
+}
+
+.delete-btn:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+}
+
+.pagination span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .admin-id-container {
+    padding: 1rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar input {
+    width: 100%;
+  }
+  
+  .rows-per-page {
+    justify-content: space-between;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-id-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .requests-table {
+    font-size: 0.7rem;
+  }
+  
+  .status-badge {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+}
